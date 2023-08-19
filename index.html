@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>money master</title>
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h2> Money Master💰 </h2>
+<body class="max-h-full">
+    <header class="py-6">
+        <h1 class="text-3xl font-bold text-center"> Money Master💰</h1>
     </header>
+    <main> 
+        <div class="hero min-h-screen bg-base-300">
+            <div class="hero-content flex-col lg:flex-row justify-between">
+            <div class="w-1/2 flex-1"> 
+              <img src="./master.jpg" class="rounded-lg shadow-2xl w-full" />
+                </div>
+              <div class="px-2 md:px-5 lg:px-40">
+                <div class="text-center">
+                  <!-- income -->
+                    <h2 class="text-2xl mb-3 font-semibold">Income</h2>
+                    <p class="text-xl mb-5">Income  &nbsp :  <input id="total-income-id" type="text"></p>
+                    <!-- expense -->
+                    <h2 class="text-2xl mb-3 font-semibold">Expenses</h2>
+                    <p class="text-xl mb-2">Food &nbsp : &nbsp&nbsp <input id="food-id" type="text"></p>
+                    <p class="text-xl mb-2">Rent &nbsp : &nbsp&nbsp <input id="rent-id" type="text"></p>
+                    <p class="text-xl mb-2">Clothes : <input id="clothId" type="text" id="cloths-id"></p>
+                </div>
+                <!-- calculation -->
+                <div class="text-center mt-8">
+                  <button class="btn bg-black text-white w-full" id="initial-calculation">Calculate</button>
+                  <h2 class="text-2xl font-semibold my-4">Total Expense : <span id="total-expense-id">00</span></h2>
+                  <h2 class="text-2xl font-semibold my-4">Balance : <span id="balance-id">00</span></h2>
+                </div>
+                <!-- savings calculation -->
+                <div class="text-center mt-8">
+                  <div class="flex items-center gap-4">
+                    <p class="text-xl mb-2">Save : <input class="py-3 w-40 rounded-lg" id="savingId" type="text"> %</p>
+                    <button class="btn bg-black text-white" id="save-btn">Save</button>
+                  </div>
+                  <h2 class="text-2xl font-bold my-4">Saving Amount : <span id="saving-ammount" >00</span></h2>
+                  <h2 class="text-2xl font-bold my-4">Remaining Balance : <span id="remaining-balance">00</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
 </body>
 </html>
