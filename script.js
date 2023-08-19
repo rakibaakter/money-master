@@ -34,6 +34,8 @@ document.getElementById('save-btn').addEventListener('click', function(){
     }
     
     const totalExpense = food + rent + cloths;
+    document.getElementById('total-expense-id').innerText = totalExpense;
+    
     const balance = totalIncome - totalExpense;
     
     const totalSave = ((save*balance)/100);
